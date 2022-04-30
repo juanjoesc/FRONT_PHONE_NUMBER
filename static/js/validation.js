@@ -14,6 +14,7 @@ function validation(username) {
                 alert("Número actualizado con éxito!");
             },
             error: function(result) {
+                console.log(result)
                 alert("El número ingresado no tiene un formato válido!");
             }
         });
