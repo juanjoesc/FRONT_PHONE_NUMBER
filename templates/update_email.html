@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>127.0.0.1</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+        <!-- Web Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Radio+Canada">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    </head>
+    <body>
+        <div class="background"></div>
+
+        <div class="outer-div">
+            <div class="inner-div">
+                <div class="form-card">
+                    <div class="form-title">Introduzca el nuevo número</div>
+                    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+                    <form action="submitscript.php" target="dummyframe">
+                        <div class="form-field">
+                            <label for="firstname">Nuevo número</label>
+                            <input type="text" name="number" id="number"/><br>
+                        </div>
+                        <div class="form-field">
+                            <label for="firstname">Confirmación</label>
+                            <input type="text" name="confirmation" id="confirmation"/><br>
+                        </div>
+                        <button onclick="validation(name)" id="submit" name="{{ username }}">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='js/validation.js') }}"></script> 
+    </body>
+</html>
